@@ -1,1 +1,41 @@
-<p>progress works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <h4 class="card-title">Barra de progreso</h4>
+            <div class="card-body">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="progreso1" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso1 + '%'"></div>
+                </div>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="progreso2" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso2 + '%'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-incrementador (actualizaValor)="progreso1 = $event" nombre="Progres Azul" [progreso]="progreso1"></app-incrementador>
+                <!-- <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-primary" type="button" id="button-addon1" (click)="cambiarValor(-5)"><i class="mdi mdi-minus"></i></button>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" name="progreso" [(ngModel)]="progreso">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="button-addon2" (click)="cambiarValor(+5)"><i class="mdi mdi-plus"></i></button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-incrementador (actualizaValor)="progreso2 = $event" nombre="Progres Verde" [progreso]="progreso2"></app-incrementador>
+            </div>
+        </div>
+    </div>
+</div>
