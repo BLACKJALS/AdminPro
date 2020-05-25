@@ -9,6 +9,7 @@ import { APP_ROOTS } from './app-routing.module';
 
 // Módulos
 import { PagesModule } from './pages/pages.module';
+import { ServiceModule } from './services/service.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { PagesModule } from './pages/pages.module';
     BrowserModule,
     PagesModule,
     FormsModule,
+    ServiceModule,
     APP_ROOTS
   ],
   providers: [],
